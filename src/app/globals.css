@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --spotify-green: #1db954;
+  --spotify-black: #121212;
+  --spotify-light-grey: #282828;
+}
+
+/* Configuración global del cuerpo */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar personalizada y elegante para las columnas */
+.no-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: #3e3e3e;
+  border-radius: 10px;
+}
+
+.no-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Estilización de los Sliders (Inputs de rango) */
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #4d4d4d;
+  height: 4px;
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: white;
+  border-radius: 50%;
+  margin-top: -4px; /* Centra el círculo en la pista */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background: var(--spotify-green);
+  transform: scale(1.2);
+}
+
+/* Animación suave para las tarjetas de canciones */
+.track-item-transition {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.track-item-transition:active {
+  transform: scale(0.98);
+}
+
